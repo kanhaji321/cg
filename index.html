@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CG End Sem Answers - Harsh Sharma</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]});"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Sidebar Toggle Button -->
+<button class="sidebar-toggle" id="sidebarToggle">
+  📋 Index
+</button>
+
+<!-- Left Sidebar TOC -->
+<nav class="sidebar-toc" id="sidebarToc">
+  <div class="sidebar-header">
+    <h3>📒 INDEX</h3>
+    <span class="sidebar-subtitle">CG End Sem Notes</span>
+    <button class="sidebar-close" id="sidebarClose">✕</button>
+  </div>
+
+  <div class="sidebar-content">
+    <details class="toc-group" open>
+      <summary>Q1 — Compulsory <span class="toc-marks">20M</span></summary>
+      <ul>
+        <li><a href="#q1">(A) Definitions (24 terms)</a></li>
+        <li><a href="#q1">(B) Rotation about Arbitrary Point</a></li>
+        <li><a href="#q1">(C) Laser Printer Working</a></li>
+        <li><a href="#q1">(D) Laptop Screen Construction</a></li>
+        <li><a href="#q1">(E) Mid Point Circle Algorithm</a></li>
+      </ul>
+    </details>
+
+    <details class="toc-group">
+      <summary>Q2 — Frame Buffer <span class="toc-marks">10M</span></summary>
+      <ul>
+        <li><a href="#q2">(A) Time to load Frame Buffer</a></li>
+        <li><a href="#q2">(B) Memory for 640×400 display</a></li>
+        <li><a href="#q2">(C) Time per row scan</a></li>
+        <li><a href="#q2">(D) Frame Buffer 600×400</a></li>
+        <li><a href="#q2">(E) Resolution of 4×4 inch image</a></li>
+        <li><a href="#q2">(F) Raster System 1280×1024</a></li>
+      </ul>
+    </details>
+
+    <details class="toc-group">
+      <summary>Q3 — Transformations <span class="toc-marks">10M</span></summary>
+      <ul>
+        <li><a href="#q3">(A) Homogeneous Coordinates</a></li>
+        <li><a href="#q3">(B) Rotations are Commutative</a></li>
+        <li><a href="#q3">(C) Reflection in y=x, y=−x</a></li>
+        <li><a href="#q3">(D) Shear = Rotation + Scaling</a></li>
+      </ul>
+    </details>
+
+    <details class="toc-group">
+      <summary>Q4 — Visible Surface <span class="toc-marks">10M</span></summary>
+      <ul>
+        <li><a href="#q4">(A) Image Space vs Object Space</a></li>
+        <li><a href="#q4">(B) A-Buffer Algorithm</a></li>
+        <li><a href="#q4">(C) Painter's Algorithm</a></li>
+        <li><a href="#q4">(D) Optical Mouse Working</a></li>
+      </ul>
+    </details>
+
+    <details class="toc-group">
+      <summary>Q5 — Clipping + Table <span class="toc-marks">10M</span></summary>
+      <ul>
+        <li><a href="#q5">(A) Cohen-Sutherland Clipping</a></li>
+        <li><a href="#q5">(B) Reflection & Shear Table</a></li>
+      </ul>
+    </details>
+
+    <details class="toc-group">
+      <summary>Q6 — Short Notes <span class="toc-marks">10M</span></summary>
+      <ul>
+        <li><a href="#q6">(A) BAR Code Reader</a></li>
+        <li><a href="#q6">(B) Warnock's Algorithm</a></li>
+        <li><a href="#q6">(C) Z-Buffer Algorithm</a></li>
+        <li><a href="#q6">(D) Inkjet Printer</a></li>
+        <li><a href="#q6">(E) Working of Scanner</a></li>
+        <li><a href="#q6">(G) RGB Color Model</a></li>
+        <li><a href="#q6">(H) Applications of CG</a></li>
+      </ul>
+    </details>
+  </div>
+</nav>
+
+<!-- Overlay for mobile -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<div class="page-wrapper">
+
+  <!-- ==================== Q1 ==================== -->
+  <div class="answer-page" id="q1">
+    <div class="q-header">
+      Q.No.1 — COMPULSORY
+      <span class="marks-badge">20 MARKS</span>
+    </div>
+
+    <div class="ruled-content">
+
+      <!-- Q1(A) Definitions -->
+      <h2 class="q-title">(A) Define the following terms: (24 × ½ = 12 marks)</h2>
+      <span class="ans-label">Ans:</span>
+
+      <div class="def-grid">
+        <div class="def-item"><span class="def-term">1. Computer</span>An electronic device that takes raw input data, processes it using a set of instructions (programs), and produces meaningful output. It can perform arithmetic, logical, and data storage operations at very high speed.</div>
+        <div class="def-item"><span class="def-term">2. Graphics</span>Visual representation of data, objects, or information using lines, curves, shapes, and colors on a display device. Graphics help us understand complex data through pictures rather than just numbers.</div>
+        <div class="def-item"><span class="def-term">3. Computer Graphics</span>A branch of Computer Science that deals with the creation, manipulation, storage, and rendering of visual images using computers. It includes both 2D and 3D image generation techniques.</div>
+        <div class="def-item"><span class="def-term">4. GUI</span>Graphical User Interface — a visual interface that uses icons, windows, buttons, and menus for user interaction instead of text commands. Examples include Windows, macOS, and Linux desktop environments.</div>
+        <div class="def-item"><span class="def-term">5. Simulation</span>A computer-based imitation or model of a real-world process, system, or environment used for analysis, training, testing, or prediction. For example, flight simulators are used to train pilots safely.</div>
+        <div class="def-item"><span class="def-term">6. Image Processing</span>A set of computational techniques applied to digital images to enhance their quality, extract useful information, or transform them in various ways. Common operations include filtering, edge detection, and contrast adjustment.</div>
+        <div class="def-item"><span class="def-term">7. Virtual Reality</span>A computer-generated immersive 3D environment that simulates real or imaginary worlds. Users interact with this environment using special devices like VR headsets, gloves, and motion sensors.</div>
+        <div class="def-item"><span class="def-term">8. Snap Shot</span>A single static image captured at a specific instant of time from a video, animation, or screen display. It represents the state of the visual output at that particular moment.</div>
+        <div class="def-item"><span class="def-term">9. Frame</span>A single complete image in a sequence of images that form an animation or video. Multiple frames displayed rapidly (e.g., 24-60 per second) create the illusion of smooth motion.</div>
+        <div class="def-item"><span class="def-term">10. Frame Buffer</span>A dedicated region of RAM that stores the pixel color data for one complete screen frame. The display controller reads this buffer continuously to refresh the image on screen.</div>
+        <div class="def-item"><span class="def-term">11. Pixel</span>The smallest individually addressable picture element (dot) on a display screen. Each pixel has a specific color value, and together millions of pixels form the complete image we see.</div>
+        <div class="def-item"><span class="def-term">12. Video Clip</span>A short continuous sequence of frames that forms a moving image or animation. It is stored digitally and can be played back at a specified frame rate to show motion.</div>
+        <div class="def-item"><span class="def-term">13. Raster-Scan Systems</span>A display system that renders the image by scanning the screen horizontally, line by line from top to bottom, refreshing each pixel sequentially. This is the most common display technology used in monitors and TVs.</div>
+        <div class="def-item"><span class="def-term">14. Persistence</span>The property of the phosphor coating on a CRT screen to continue emitting light (glowing) for a short duration after the electron beam has moved away. Higher persistence reduces flicker.</div>
+        <div class="def-item"><span class="def-term">15. Resolution</span>The number of pixels per unit area on a display, typically measured in dpi (dots per inch). Higher resolution means more pixels packed together, resulting in a sharper and more detailed image.</div>
+        <div class="def-item"><span class="def-term">16. Brightness</span>The perceived intensity of light emitted by a display screen or an individual pixel. It determines how bright or dim the image appears to the viewer and is controlled by pixel luminance values.</div>
+        <div class="def-item"><span class="def-term">17. Intensity</span>A numerical value (typically ranging from 0 to 255 for 8-bit systems) that represents the luminance or brightness level of a pixel. A value of 0 means black (no light) and 255 means full brightness.</div>
+        <div class="def-item"><span class="def-term">18. INK JET Printer</span>A type of printer that produces images by spraying extremely fine droplets of liquid ink onto paper. It uses either thermal (heat bubble) or piezoelectric (crystal vibration) mechanisms to eject ink from tiny nozzles.</div>
+        <div class="def-item"><span class="def-term">19. Toner</span>A fine, electrically charged dry powder used in laser printers and photocopiers to form text and images on paper. The toner particles are attracted to charged areas on a drum and then fused onto paper using heat.</div>
+        <div class="def-item"><span class="def-term">20. Refresh Buffer</span>A memory area that stores the image data which is used to repeatedly redraw (refresh) the display screen, maintaining a stable and flicker-free image. It is essentially the same concept as a Frame Buffer.</div>
+        <div class="def-item"><span class="def-term">21. Anti-Aliasing</span>A technique used to reduce the jagged, staircase-like edges (called "jaggies" or aliasing artifacts) that appear in raster images. It works by smoothing pixel boundaries using intermediate color shades.</div>
+        <div class="def-item"><span class="def-term">22. CMY</span>Cyan, Magenta, Yellow — a subtractive color model primarily used in color printing. Colors are created by absorbing (subtracting) light wavelengths. The relationship with RGB is: CMY = 1 − RGB.</div>
+        <div class="def-item"><span class="def-term">23. HSV</span>Hue, Saturation, Value — a color model based on how humans actually perceive color. Hue represents the color type (0°-360°), Saturation is the purity/vividness, and Value is the brightness level.</div>
+        <div class="def-item"><span class="def-term">24. JPG/JPEG</span>Joint Photographic Experts Group — a widely used lossy compressed image format. It reduces file size significantly by discarding some visual data that the human eye is less sensitive to, making it ideal for photographs.</div>
+      </div>
+
+      <div class="separator"></div>
+
+      <!-- Q1(B) Transformation Matrix for Rotation about Arbitrary Point -->
+      <h2 class="q-title">(B) Transformation Matrix — 2D Rotation about Arbitrary Point (2 marks)</h2>
+      <span class="ans-label">Ans:</span>
+
+      <ul class="bullet-list">
+        <li>Rotation about an arbitrary point $P(x_r, y_r)$ means rotating an object by some angle $\theta$ around a fixed point that is <strong>NOT the origin</strong>. This is a very common requirement in real-world graphics applications.</li>
+        <li>Since the standard rotation matrix only works about the origin (0,0), we need to use a <strong>3-step composite transformation process</strong> to achieve this rotation correctly.</li>
+      </ul>
+
+      <h3 class="sub-q">Steps:</h3>
+      <ul class="point-list">
+        <li><strong>Translate</strong> the arbitrary pivot point $P(x_r, y_r)$ to the origin by applying $T(-x_r, -y_r)$. This shifts the entire object so that the pivot point sits at $(0,0)$.</li>
+        <li><strong>Rotate</strong> the object by the desired angle $\theta$ about the origin using the standard rotation matrix $R(\theta)$. Now the rotation works correctly since the pivot is at origin.</li>
+        <li><strong>Translate back</strong> to the original position by applying $T(x_r, y_r)$. This moves the object and the pivot point back to where they originally were.</li>
+      </ul>
+
+      <div class="matrix-block">
+<strong>Step 1:</strong> Translate to origin:
+$$T(-x_r, -y_r) = \begin{bmatrix} 1 & 0 & -x_r \\ 0 & 1 & -y_r \\ 0 & 0 & 1 \end{bmatrix}$$
+
+<strong>Step 2:</strong> Rotate by $\theta$ about origin:
+$$R(\theta) = \begin{bmatrix} \cos\theta & -\sin\theta & 0 \\ \sin\theta & \cos\theta & 0 \\ 0 & 0 & 1 \end{bmatrix}$$
+
+<strong>Step 3:</strong> Translate back:
+$$T(x_r, y_r) = \begin{bmatrix} 1 & 0 & x_r \\ 0 & 1 & y_r \\ 0 & 0 & 1 \end{bmatrix}$$
+      </div>
+
+      <div class="highlight-box">
+        <strong>Final Transformation Matrix:</strong><br>
+        $T(x_r, y_r) \cdot R(\theta) \cdot T(-x_r, -y_r)$
+      </div>
+
+      <div class="matrix-block">
+<strong>Combined Result:</strong>
+$$\begin{bmatrix} \cos\theta & -\sin\theta & x_r(1-\cos\theta) + y_r\sin\theta \\ \sin\theta & \cos\theta & y_r(1-\cos\theta) - x_r\sin\theta \\ 0 & 0 & 1 \end{bmatrix}$$
+      </div>
+
+      <div class="separator"></div>
+
+      <!-- Q1(C) Laser Printer -->
+      <h2 class="q-title">(C) Working of Laser Printer — Point Wise (All 07 Points) (2 marks)</h2>
+      <span class="ans-label">Ans:</span>
+
+      <ul class="point-list">
+        <li><strong>Data Sent:</strong> The document data is sent from the computer to the printer's internal processor as digital signals, which are then converted into a page image.</li>
+        <li><strong>Laser Scans Drum:</strong> A focused laser beam scans across a rotating photosensitive drum surface, line by line, creating a pattern based on the image data.</li>
+        <li><strong>Electrostatic Image Formed:</strong> The laser discharges selected areas on the drum surface, forming an invisible electrostatic (latent) image that corresponds to the text or graphics being printed.</li>
+        <li><strong>Toner Attracted:</strong> Fine, electrically charged toner powder is applied to the drum, and it sticks only to the areas that were discharged by the laser beam.</li>
+        <li><strong>Paper Passes Near Drum:</strong> A sheet of paper is fed through the printer and given an opposite electrical charge so it can attract the toner from the drum surface.</li>
+        <li><strong>Toner Transfers to Paper:</strong> The toner particles transfer from the drum onto the paper surface due to the electrostatic attraction between the charged paper and the toner.</li>
+        <li><strong>Heat Fuses Toner:</strong> Finally, the fuser unit applies both heat and pressure to permanently melt and bond the toner particles onto the paper, producing the final printed output.</li>
+      </ul>
+
+      <div class="diagram-wrap">
+        <svg width="600" height="100" viewBox="0 0 600 100" xmlns="http://www.w3.org/2000/svg">
+          <!-- Flow boxes -->
+          <rect x="5" y="30" width="75" height="36" rx="3" fill="#1a3a6b" stroke="none"/>
+          <text x="42" y="52" text-anchor="middle" fill="white" font-family="monospace" font-size="9">Computer</text>
+          <polygon points="80,48 92,42 92,54" fill="#8b1a1a"/>
+          <rect x="92" y="30" width="75" height="36" rx="3" fill="#1a3a6b"/>
+          <text x="129" y="52" text-anchor="middle" fill="white" font-family="monospace" font-size="9">Laser+Drum</text>
+          <polygon points="167,48 179,42 179,54" fill="#8b1a1a"/>
+          <rect x="179" y="30" width="75" height="36" rx="3" fill="#1a3a6b"/>
+          <text x="216" y="52" text-anchor="middle" fill="white" font-family="monospace" font-size="9">Toner Apply</text>
+          <polygon points="254,48 266,42 266,54" fill="#8b1a1a"/>
+          <rect x="266" y="30" width="75" height="36" rx="3" fill="#1a3a6b"/>
+          <text x="303" y="52" text-anchor="middle" fill="white" font-family="monospace" font-size="9">Paper Feed</text>
+          <polygon points="341,48 353,42 353,54" fill="#8b1a1a"/>
+          <rect x="353" y="30" width="75" height="36" rx="3" fill="#1a3a6b"/>
+          <text x="390" y="52" text-anchor="middle" fill="white" font-family="monospace" font-size="9">Transfer</text>
+          <polygon points="428,48 440,42 440,54" fill="#8b1a1a"/>
+          <rect x="440" y="30" width="75" height="36" rx="3" fill="#2e7d32"/>
+          <text x="477" y="52" text-anchor="middle" fill="white" font-family="monospace" font-size="9">Fuser (Heat)</text>
+          <polygon points="515,48 527,42 527,54" fill="#8b1a1a"/>
+          <rect x="527" y="30" width="65" height="36" rx="3" fill="#2e7d32"/>
+          <text x="559" y="52" text-anchor="middle" fill="white" font-family="monospace" font-size="9">Output</text>
+        </svg>
+        <div class="diagram-label">FIG: LASER PRINTER WORKING FLOW</div>
+      </div>
+
+      <div class="separator"></div>
+
+      <!-- Q1(D) Laptop Screen Construction -->
+      <h2 class="q-title">(D) Construction & Working of LAP-TOP Screen — Point Wise (2 marks)</h2>
+      <span class="ans-label">Ans:</span>
+
+      <ul class="point-list">
+        <li><strong>LCD Panel:</strong> This is the main display layer of the laptop screen. It controls the amount of light passing through each pixel position to form the visible image on screen.</li>
+        <li><strong>Backlight (LED):</strong> An array of LED lights placed behind the LCD panel that provides a uniform white light source. Without this backlight, the LCD panel alone cannot produce any visible image.</li>
+        <li><strong>Polarizing Filters:</strong> Two polarizing filters are placed on either side of the liquid crystal layer. They regulate the direction of light waves before and after passing through the crystals to control brightness.</li>
+        <li><strong>Liquid Crystal Layer:</strong> This layer contains liquid crystal molecules that twist or untwist when an electrical voltage is applied, which controls the intensity of light passing through each individual pixel.</li>
+        <li><strong>Color Filters (RGB):</strong> A layer of tiny Red, Green, and Blue color filters placed over each sub-pixel. By combining these three primary colors in varying intensities, the display can reproduce millions of different colors.</li>
+        <li><strong>Glass Substrates:</strong> Two thin, transparent glass plates that sandwich and hold the liquid crystal material in place. They also provide structural support and proper alignment for the crystal molecules.</li>
+        <li><strong>Driver Circuit:</strong> An integrated circuit board that supplies precise electrical signals to control each individual pixel on the screen. It receives data from the GPU and converts it into pixel-level voltage signals.</li>
+      </ul>
+
+      <div class="diagram-wrap">
+        <svg width="520" height="130" viewBox="0 0 520 130" xmlns="http://www.w3.org/2000/svg">
+          <!-- Layer stack diagram -->
+          <g font-family="monospace" font-size="10">
+            <rect x="20" y="10" width="180" height="16" rx="2" fill="#f5f5dc" stroke="#aaa"/>
+            <text x="110" y="22" text-anchor="middle" fill="#333">Glass Substrate (Front)</text>
+            <rect x="20" y="28" width="180" height="16" rx="2" fill="#b0c4de" stroke="#aaa"/>
+            <text x="110" y="40" text-anchor="middle" fill="#1a1a6b">Polarizing Filter (Front)</text>
+            <rect x="20" y="46" width="180" height="16" rx="2" fill="#add8e6" stroke="#aaa"/>
+            <text x="110" y="58" text-anchor="middle" fill="#333">Color Filter (RGB)</text>
+            <rect x="20" y="64" width="180" height="16" rx="2" fill="#e0ffe0" stroke="#aaa"/>
+            <text x="110" y="76" text-anchor="middle" fill="#1a4a1a">Liquid Crystal Layer</text>
+            <rect x="20" y="82" width="180" height="16" rx="2" fill="#b0c4de" stroke="#aaa"/>
+            <text x="110" y="94" text-anchor="middle" fill="#1a1a6b">Polarizing Filter (Back)</text>
+            <rect x="20" y="100" width="180" height="16" rx="2" fill="#f5f5dc" stroke="#aaa"/>
+            <text x="110" y="112" text-anchor="middle" fill="#333">Glass Substrate (Back)</text>
+            <rect x="20" y="118" width="180" height="10" rx="2" fill="#fffacd" stroke="#f0ad00"/>
+            <text x="110" y="126" text-anchor="middle" fill="#7b5e00">LED Backlight</text>
+          </g>
+          <!-- Arrows + labels -->
+          <text x="220" y="70" font-family="monospace" font-size="9" fill="#8b1a1a">← Layers from</text>
+          <text x="220" y="82" font-family="monospace" font-size="9" fill="#8b1a1a">   front to back</text>
+          <text x="220" y="110" font-family="monospace" font-size="9" fill="#2e7d32">Light ↑</text>
+          <!-- Driver circuit -->
+          <rect x="340" y="40" width="150" height="50" rx="4" fill="#1a3a6b"/>
+          <text x="415" y="62" text-anchor="middle" fill="white" font-family="monospace" font-size="10">Driver Circuit</text>
+          <text x="415" y="76" text-anchor="middle" fill="#adc8ff" font-family="monospace" font-size="9">Controls pixels via</text>
+          <text x="415" y="88" text-anchor="middle" fill="#adc8ff" font-family="monospace" font-size="9">electrical signals</text>
+          <line x1="200" y1="70" x2="340" y2="65" stroke="#8b1a1a" stroke-dasharray="4" stroke-width="1"/>
+        </svg>
+        <div class="diagram-label">FIG: LAPTOP SCREEN LAYER CONSTRUCTION</div>
+      </div>
+
+      <div class="separator"></div>
+
+      <!-- Q1(E) Mid Point Circle Algorithm -->
+      <h2 class="q-title">(E) Mid Point Circle Tracing Algorithm — r = 10, First Quadrant, x=0 to x=y (2 marks)</h2>
+      <span class="ans-label">Ans:</span>
+
+      <div class="calc-block">
+<span class="step">GIVEN:</span> Center $= (0, 0)$, Radius $r = 10$<br><br>
+<span class="step">INITIAL VALUES:</span><br>
+Starting point $= (0, 10)$<br>
+Decision parameter: $P_0 = 1 - r = 1 - 10 = \mathbf{-9}$<br><br>
+<span class="step">UPDATE RULES:</span><br>
+$$\text{If } P < 0 \implies P_{\text{new}} = P + 2x + 3 \quad \text{(y stays same)}$$
+$$\text{If } P \geq 0 \implies P_{\text{new}} = P + 2x - 2y + 5 \quad \text{(y decreases by 1)}$$
+      </div>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Step</th>
+            <th>x</th>
+            <th>y</th>
+            <th>P (Decision Param)</th>
+            <th>Action</th>
+            <th>Plot Point</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>0</td><td>0</td><td>10</td><td class="neg">P₀ = −9</td><td>P &lt; 0 → y same</td><td>(0, 10)</td></tr>
+          <tr><td>1</td><td>1</td><td>10</td><td class="neg">P = −9+2(0)+3 = −6</td><td>P &lt; 0 → y same</td><td>(1, 10)</td></tr>
+          <tr><td>2</td><td>2</td><td>10</td><td class="neg">P = −6+2(1)+3 = −1</td><td>P &lt; 0 → y same</td><td>(2, 10)</td></tr>
+          <tr><td>3</td><td>3</td><td>10</td><td>P = −1+2(2)+3 = +6</td><td>P ≥ 0 → y−−</td><td>(3, 10)</td></tr>
+          <tr><td>4</td><td>4</td><td>9</td><td class="neg">P = 6+2(3)−2(10)+5 = −3</td><td>P &lt; 0 → y same</td><td>(4, 9)</td></tr>
+          <tr><td>5</td><td>5</td><td>9</td><td>P = −3+2(4)+3 = +8</td><td>P ≥ 0 → y−−</td><td>(5, 9)</td></tr>
+          <tr><td>6</td><td>6</td><td>8</td><td>P = 8+2(5)−2(9)+5 = +6</td><td>P ≥ 0 → y−−</td><td>(6, 8)</td></tr>
+          <tr><td>7</td><td>7</td><td>7</td><td>— STOP (x = y)</td><td>—</td><td>(7, 7)</td></tr>
+        </tbody>
+      </table>
+
+      <div class="final-ans">∴ Points in First Quadrant (x=0 to x=y): (0,10), (1,10), (2,10), (3,10), (4,9), (5,9), (6,8), (7,7)</div>
+
+    </div>
+  </div>
+
+  <!-- ==================== Q2 ==================== -->
+  <div class="answer-page" id="q2">
+    <div class="q-header">
+      Q.No.2 — Frame Buffer Calculations
+      <span class="marks-badge">10 MARKS</span>
+    </div>
+    <div class="ruled-content">
+
+      <h2 class="q-title">(A) Time to load 1280×1024 Frame Buffer, 12 bits/pixel, Transfer Rate = 1 MBPS (2 marks)</h2>
+      <span class="ans-label">Ans:</span>
+      <div class="calc-block">
+$$\text{Total bits} = 1280 \times 1024 \times 12 = 15{,}728{,}640 \text{ bits}$$
+$$\text{Transfer Rate} = 1 \text{ MBPS} = 1 \times 10^6 \text{ bits/sec}$$
+$$\text{Time} = \frac{\text{Total bits}}{\text{Transfer Rate}} = \frac{15{,}728{,}640}{1{,}000{,}000}$$
+      </div>
+      <div class="final-ans">∴ Time to load = 15.73 seconds</div>
+
+      <div class="separator"></div>
+
+      <h2 class="q-title">(B) Memory for Frame Buffer — 640×400 display, 16 gray levels (1 mark)</h2>
+      <span class="ans-label">Ans:</span>
+      <div class="calc-block">
+$$\text{Gray levels} = 16 \quad \Rightarrow \quad \text{Bits/pixel} = \log_2(16) = 4 \text{ bits}$$
+$$\text{Memory} = 640 \times 400 \times 4 = 1{,}024{,}000 \text{ bits}$$
+$$= \frac{1{,}024{,}000}{8} = 128{,}000 \text{ bytes}$$
+      </div>
+      <div class="final-ans">∴ Memory Required = 128,000 bytes = 128 KB</div>
+
+      <div class="separator"></div>
+
+      <h2 class="q-title">(C) Time spent scanning each row — 640×480 Raster System, 60 frames/sec (2 marks)</h2>
+      <span class="ans-label">Ans:</span>
+      <div class="calc-block">
+$$\text{Refresh rate} = 60 \text{ frames/sec}$$
+$$\text{Time for 1 frame} = \frac{1}{60} \text{ sec}$$
+$$\text{Number of rows} = 480$$
+$$\text{Time per row} = \frac{1}{60 \times 480} = \frac{1}{28{,}800}$$
+      </div>
+      <div class="final-ans">∴ Time per row scan ≈ 34.72 microseconds (μs)</div>
+
+      <div class="separator"></div>
+
+      <h2 class="q-title">(D) Frame Buffer for 600×400 pixel display — KB needed (1 mark)</h2>
+      <span class="ans-label">Ans (assuming 8 bits/pixel = 1 byte):</span>
+      <div class="calc-block">
+$$\text{Memory} = 600 \times 400 \times 1 \text{ byte} = 240{,}000 \text{ bytes}$$
+$$= \frac{240{,}000}{1024}$$
+      </div>
+      <div class="final-ans">∴ Frame Buffer = 234.375 KB ≈ 234.4 KB</div>
+
+      <div class="separator"></div>
+
+      <h2 class="q-title">(E) Resolution of 4×4 inch IMAGE with 256×256 pixels (1 mark)</h2>
+      <span class="ans-label">Ans:</span>
+      <div class="calc-block">
+$$\text{Resolution} = \frac{\text{pixels}}{\text{inch}}$$
+$$\text{Horizontal:} \quad \frac{256}{4} = 64 \text{ ppi}$$
+$$\text{Vertical:} \quad \frac{256}{4} = 64 \text{ ppi}$$
+      </div>
+      <div class="final-ans">∴ Resolution = 64 dpi (dots per inch)</div>
+
+      <div class="separator"></div>
+
+      <h2 class="q-title">(F) Raster System 1280×1024, 24 bits/pixel, refresh = 60 fps (3 marks)</h2>
+      <span class="ans-label">Ans:</span>
+      <div class="calc-block">
+<span class="step">1. Frame Buffer Size:</span><br>
+$$= 1280 \times 1024 \times 24 = 31{,}457{,}280 \text{ bits}$$
+$$= \frac{31{,}457{,}280}{8} = 3{,}932{,}160 \text{ bytes} \approx 3.75 \text{ MB}$$
+
+<span class="step">2. Number of Colors:</span><br>
+$$\text{Colors} = 2^{24} = 16{,}777{,}216 \approx 16.7 \text{ Million}$$
+
+<span class="step">3. Access Time per Pixel (at 60 fps):</span><br>
+$$\text{Pixels/sec} = 1280 \times 1024 \times 60 = 78{,}643{,}200$$
+$$\text{Access time} = \frac{1}{78{,}643{,}200}$$
+      </div>
+      <div class="final-ans">
+        Frame Buffer = 3.75 MB | Colors = 16.7 Million | Access Time ≈ 12.7 nanoseconds
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==================== Q3 ==================== -->
+  <div class="answer-page" id="q3">
+    <div class="q-header">
+      Q.No.3 — Transformations & Coordinate Systems
+      <span class="marks-badge">10 MARKS</span>
+    </div>
+    <div class="ruled-content">
+
+      <h2 class="q-title">(A) Why exactly we need Homogeneous Coordinate System? (2 marks)</h2>
+      <span class="ans-label">Ans:</span>
+      <ul class="point-list">
+        <li>In 2D graphics, a point is represented as (x, y). Rotation and Scaling can be easily expressed as 2×2 matrix multiplication operations. But <strong>Translation cannot</strong> be expressed as matrix multiplication — it requires vector addition: (x+tx, y+ty), which is fundamentally different.</li>
+        <li>This inconsistency means we cannot combine translation with rotation and scaling into a <strong>single matrix multiplication</strong>, which makes composite transformations very awkward and computationally inefficient.</li>
+        <li>The solution is to add a 3rd dummy coordinate $w=1$, so a 2D point becomes $(x, y, 1)$. This converts the 2D coordinate system into a 3D homogeneous coordinate space where all transformations become uniform.</li>
+        <li>Now <strong>all transformations</strong> including Translation, Rotation, Scaling, Shear, and Reflection can be represented as $3 \times 3$ matrices and combined together by simple matrix multiplication.</li>
+        <li>The biggest advantage is that concatenation of multiple transformations becomes a single matrix product, which is <strong>computationally very efficient</strong> and easy to implement in hardware (GPUs use this extensively).</li>
+      </ul>
+      <div class="highlight-box"><strong>Key Point:</strong> Homogeneous coordinates unify all 2D transformations under a single matrix framework, eliminating the special case of translation.</div>
+
+      <div class="separator"></div>
+
+      <h2 class="q-title">(B) Two successive 2D Rotations about origin are Commutative — Prove (3 marks)</h2>
+      <span class="ans-label">Ans:</span>
+      <ul class="bullet-list">
+        <li>Two rotations $R_1(\theta_1)$ and $R_2(\theta_2)$ about the origin are said to be commutative if $R_1 \cdot R_2 = R_2 \cdot R_1$, meaning the order of applying them does not matter and the result is the same either way.</li>
+      </ul>
+      <div class="matrix-block">
+<strong>General rotation matrix:</strong>
+$$R(\theta) = \begin{bmatrix} \cos\theta & -\sin\theta & 0 \\ \sin\theta & \cos\theta & 0 \\ 0 & 0 & 1 \end{bmatrix}$$
+
+<strong>Computing $R_1 \cdot R_2$:</strong>
+$$R_1 \cdot R_2 = \begin{bmatrix} \cos\theta_1 & -\sin\theta_1 & 0 \\ \sin\theta_1 & \cos\theta_1 & 0 \\ 0 & 0 & 1 \end{bmatrix} \times \begin{bmatrix} \cos\theta_2 & -\sin\theta_2 & 0 \\ \sin\theta_2 & \cos\theta_2 & 0 \\ 0 & 0 & 1 \end{bmatrix}$$
+
+<strong>After multiplication:</strong>
+$$= \begin{bmatrix} \cos\theta_1\cos\theta_2 - \sin\theta_1\sin\theta_2 & -(\cos\theta_1\sin\theta_2 + \sin\theta_1\cos\theta_2) & 0 \\ \sin\theta_1\cos\theta_2 + \cos\theta_1\sin\theta_2 & \cos\theta_1\cos\theta_2 - \sin\theta_1\sin\theta_2 & 0 \\ 0 & 0 & 1 \end{bmatrix}$$
+
+<strong>Using trig identities:</strong>
+$$= \begin{bmatrix} \cos(\theta_1+\theta_2) & -\sin(\theta_1+\theta_2) & 0 \\ \sin(\theta_1+\theta_2) & \cos(\theta_1+\theta_2) & 0 \\ 0 & 0 & 1 \end{bmatrix} = R(\theta_1 + \theta_2)$$
+      </div>
+      <ul class="bullet-list">
+        <li>Similarly, $R_2 \cdot R_1$ also gives $R(\theta_1+\theta_2)$ — same result.</li>
+      </ul>
+      <div class="final-ans">$\therefore R_1 \cdot R_2 = R_2 \cdot R_1 = R(\theta_1+\theta_2)$ → Rotation about origin is COMMUTATIVE ✓</div>
+
+      <div class="separator"></div>
+
+      <h2 class="q-title">(C) Reflection in y=x and y=−x using Scaling + Rotation (2 marks)</h2>
+      <span class="ans-label">Ans:</span>
+
+      <h3 class="sub-q">Reflection about y = x:</h3>
+      <ul class="point-list">
+        <li>Rotate by $-45°$: $R(-45°)$</li>
+        <li>Reflect about x-axis: $S(1, -1)$ (scale y by $-1$)</li>
+        <li>Rotate back by $+45°$: $R(+45°)$</li>
+      </ul>
+      <div class="matrix-block">
+$$\text{Result} = R(45°) \cdot S(1,-1) \cdot R(-45°) = \begin{bmatrix} 0 & 1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1 \end{bmatrix}$$
+This swaps $x$ and $y$: $x' = y, \; y' = x$
+      </div>
+
+      <h3 class="sub-q">Reflection about y = −x:</h3>
+      <ul class="point-list">
+        <li>Rotate by $+45°$: $R(+45°)$</li>
+        <li>Reflect about x-axis: $S(1, -1)$</li>
+        <li>Rotate back by $-45°$: $R(-45°)$</li>
+      </ul>
+      <div class="matrix-block">
+$$\text{Result} = R(-45°) \cdot S(1,-1) \cdot R(45°) = \begin{bmatrix} 0 & -1 & 0 \\ -1 & 0 & 0 \\ 0 & 0 & 1 \end{bmatrix}$$
+This gives: $x' = -y, \; y' = -x$
+      </div>
+
+      <div class="separator"></div>
+
+      <h2 class="q-title">(D) Show how Shear Transformation can be expressed in terms of Rotation & Scaling (3 marks)</h2>
+      <span class="ans-label">Ans:</span>
+      <ul class="bullet-list">
+        <li>A <strong>Shear transformation</strong> can be decomposed into three operations: Rotate → Scale → Rotate back.</li>
+      </ul>
+
+      <h3 class="sub-q">X-Shear ($Sh_x = a$):</h3>
+      <div class="matrix-block">
+<strong>Shear Matrix:</strong>
+$$Sh_x = \begin{bmatrix} 1 & a & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}$$
+
+<strong>Decomposition:</strong>
+$$Sh_x = R(-\varphi) \cdot S\left(1,\; \frac{1}{\cos\varphi}\right) \cdot R(\varphi) \quad \text{where } \varphi = -\arctan(a)$$
+
+<strong>Steps:</strong><br>
+1. Rotate by angle $\varphi$: $R(\varphi)$<br>
+2. Non-uniform scale (compress in y): $S(1, \; 1/\cos\varphi)$<br>
+3. Rotate back by $-\varphi$: $R(-\varphi)$
+      </div>
+
+      <h3 class="sub-q">Y-Shear ($Sh_y = b$):</h3>
+      <div class="matrix-block">
+<strong>Shear Matrix:</strong>
+$$Sh_y = \begin{bmatrix} 1 & 0 & 0 \\ b & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}$$
+
+<strong>Decomposition:</strong>
+$$Sh_y = R(\varphi) \cdot S(\cos\varphi,\; 1) \cdot R(-\varphi)$$
+      </div>
+      <div class="highlight-box"><strong>Conclusion:</strong> Any shear = Rotation(angle) · Non-uniform Scaling · Rotation(−angle). This proves shear is NOT a fundamental transform — it's built from rotation and scaling.</div>
+
+    </div>
+  </div>
+
+  <!-- ==================== Q4 ==================== -->
+  <div class="answer-page" id="q4">
+    <div class="q-header">
+      Q.No.4 — Visible Surface Detection
+      <span class="marks-badge">10 MARKS</span>
+    </div>
+    <div class="ruled-content">
+
+      <h2 class="q-title">(A) Image Space & Object Space Algorithm — Back Face Removal (1 mark)</h2>
+      <span class="ans-label">Ans:</span>
+      <div class="two-col">
+        <div class="highlight-box">
+          <strong>Object Space Algorithm:</strong><br>
+          Comparisons and visibility decisions are done between 3D objects in their original world coordinates BEFORE projection onto the 2D screen. These methods work with the actual geometry. Examples: Back-face removal, BSP Tree method.
+        </div>
+        <div class="highlight-box">
+          <strong>Image Space Algorithm:</strong><br>
+          Visibility decisions are made at the individual pixel level AFTER all objects have been projected onto the 2D screen. These methods process the final image pixel by pixel. Examples: Z-Buffer, A-Buffer, Ray Casting.
+        </div>
+      </div>
+
+      <div class="separator"></div>
+
+      <h2 class="q-title">(B) A-Buffer Algorithm — Point Wise, Why it's Expansion of Z-Buffer, Limitations (4 marks)</h2>
+      <span class="ans-label">Ans:</span>
+      <h3 class="sub-q">A-Buffer Algorithm (Point Wise):</h3>
+      <ul class="point-list">
+        <li>Each pixel position in the buffer contains a <strong>linked list of surface fragments</strong> instead of storing just a single depth value like the Z-Buffer does.</li>
+        <li>Each fragment in the list stores multiple pieces of data: depth (z-value), opacity (α), RGB color values, a coverage mask for anti-aliasing, and the surface ID it belongs to.</li>
+        <li>For each polygon in the scene, and for each pixel that polygon covers, the algorithm computes the fragment data and adds it to that pixel's linked list.</li>
+        <li>After all polygons in the scene have been processed, the fragments at each pixel are sorted by their depth values from front to back.</li>
+        <li>The sorted fragments are then composited together using alpha blending formula: <em>C = α·C_front + (1−α)·C_back</em>, which correctly handles transparency.</li>
+        <li>The final composited color value is then written to the frame buffer and displayed on screen at that pixel location.</li>
+      </ul>
+      <h3 class="sub-q">Why called Expansion of Z-Buffer?</h3>
+      <ul class="bullet-list">
+        <li>The Z-Buffer algorithm stores only <strong>ONE depth value</strong> per pixel in the depth buffer, which means it can only track the nearest surface and cannot handle transparent or semi-transparent objects at all.</li>
+        <li>The A-Buffer <strong>EXPANDS</strong> upon this limitation by storing a complete linked LIST of fragments per pixel, which allows it to properly handle multiple transparent and semi-transparent surfaces overlapping at the same pixel.</li>
+        <li>The "A" in A-Buffer stands for Anti-aliased, Area-averaged, Accumulation Buffer, reflecting its ability to produce smoother, higher quality rendered images.</li>
+      </ul>
+      <h3 class="sub-q">Limitations of A-Buffer:</h3>
+      <ul class="point-list">
+        <li>Requires very high <strong>memory usage</strong> because it must store multiple fragments (each with color, depth, opacity data) per pixel position.</li>
+        <li><strong>Complex implementation</strong> compared to the simpler Z-Buffer, as it involves managing dynamic linked lists, sorting, and compositing operations.</li>
+        <li>Rendering is significantly <strong>slower</strong> because of the overhead of sorting fragment lists and performing alpha blending compositing at each pixel.</li>
+        <li>Not suitable for <strong>real-time rendering</strong> applications or systems with limited computational resources due to its heavy processing requirements.</li>
+      </ul>
+
+      <div class="separator"></div>
+
+      <h2 class="q-title">(C) Painters Algorithm — Point Wise & Limitations (3 marks)</h2>
+      <span class="ans-label">Ans:</span>
+      <ul class="point-list">
+        <li>Sort all polygons in scene by their <strong>depth (z-value) from farthest to nearest</strong>.</li>
+        <li>Paint (render) polygons starting from the <strong>farthest (back) to nearest (front)</strong>.</li>
+        <li>Nearer polygons are painted OVER farther ones — like a painter painting background first.</li>
+        <li>Continue until all polygons rendered → final image displayed.</li>
+      </ul>
+      <div class="diagram-wrap">
+        <svg width="300" height="100" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+          <rect x="20" y="30" width="100" height="60" fill="#b0c4de" stroke="#333" stroke-width="1"/>
+          <text x="70" y="65" text-anchor="middle" font-family="monospace" font-size="10" fill="#333">Back (far)</text>
+          <rect x="60" y="20" width="100" height="60" fill="#90ee90" stroke="#333" stroke-width="1"/>
+          <text x="110" y="55" text-anchor="middle" font-family="monospace" font-size="10" fill="#333">Middle</text>
+          <rect x="100" y="10" width="100" height="60" fill="#ffb6c1" stroke="#333" stroke-width="1"/>
+          <text x="150" y="45" text-anchor="middle" font-family="monospace" font-size="10" fill="#333">Front (near)</text>
+          <text x="240" y="55" font-family="monospace" font-size="9" fill="#8b1a1a">Paint order:</text>
+          <text x="240" y="67" font-family="monospace" font-size="9" fill="#8b1a1a">Blue→Green→Pink</text>
+        </svg>
+        <div class="diagram-label">FIG: PAINTERS ALGORITHM — BACK TO FRONT RENDERING</div>
+      </div>
+      <h3 class="sub-q">Limitations:</h3>
+      <ul class="point-list">
+        <li><strong>Cyclic overlap</strong> — if A overlaps B overlaps C overlaps A, sort order cannot be determined.</li>
+        <li><strong>Penetrating polygons</strong> — polygons that intersect each other cannot be handled correctly.</li>
+        <li><strong>Sorting is expensive</strong> — O(n log n) time complexity.</li>
+        <li>No support for <strong>transparency</strong>.</li>
+      </ul>
+
+      <div class="separator"></div>
+
+      <h2 class="q-title">(D) Construction & Working of Optical Mouse — Point Wise (2 marks)</h2>
+      <span class="ans-label">Ans:</span>
+      <ul class="point-list">
+        <li><strong>LED Illumination:</strong> An LED (Light Emitting Diode) at the bottom of the mouse illuminates the surface beneath it with a bright light, making surface texture details visible to the sensor.</li>
+        <li><strong>CMOS Sensor:</strong> A tiny CMOS image sensor continuously captures hundreds of microscopic images of the illuminated surface texture every second.</li>
+        <li><strong>DSP Processing:</strong> A built-in Digital Signal Processor (DSP) chip analyzes and compares successive captured surface images to detect any changes in position or pattern.</li>
+        <li><strong>Movement Detection:</strong> By analyzing the differences between consecutive images, the DSP calculates the exact direction and speed of the mouse movement across the surface.</li>
+        <li><strong>Data Transmission:</strong> The calculated movement data (dx, dy coordinates) is transmitted to the computer via USB cable or wirelessly through Bluetooth or RF signals.</li>
+        <li><strong>Cursor Update:</strong> The computer's operating system receives the movement data and updates the cursor position on the screen accordingly, providing real-time visual feedback to the user.</li>
+      </ul>
+
+    </div>
+  </div>
+
+  <!-- ==================== Q5 ==================== -->
+  <div class="answer-page" id="q5">
+    <div class="q-header">
+      Q.No.5 — Cohen-Sutherland + Transformation Table
+      <span class="marks-badge">10 MARKS</span>
+    </div>
+    <div class="ruled-content">
+
+      <h2 class="q-title">(A) Cohen-Sutherland Line Clipping Algorithm — Point Wise (5 marks)</h2>
+      <span class="ans-label">Ans:</span>
+
+      <h3 class="sub-q">Region Code Assignment (4-bit code for each endpoint):</h3>
+      <ul class="point-list">
+        <li><strong>Bit 1 (LEFT):</strong>  x &lt; x_min  → set to 1</li>
+        <li><strong>Bit 2 (RIGHT):</strong> x &gt; x_max  → set to 1</li>
+        <li><strong>Bit 3 (BELOW):</strong> y &lt; y_min  → set to 1</li>
+        <li><strong>Bit 4 (ABOVE):</strong> y &gt; y_max  → set to 1</li>
+      </ul>
+
+      <div class="diagram-wrap">
+        <div class="region-code-grid">
+          <div class="rc-cell code">1001</div>
+          <div class="rc-cell code">1000</div>
+          <div class="rc-cell code">1010</div>
+          <div class="rc-cell code">0001</div>
+          <div class="rc-cell center">0000<br><small style="font-size:8px">WINDOW</small></div>
+          <div class="rc-cell code">0010</div>
+          <div class="rc-cell code">0101</div>
+          <div class="rc-cell code">0100</div>
+          <div class="rc-cell code">0110</div>
+        </div>
+        <div class="diagram-label">FIG: COHEN-SUTHERLAND REGION CODES (Above|Below|Right|Left)</div>
+      </div>
+
+      <h3 class="sub-q">Algorithm Steps:</h3>
+      <ul class="point-list">
+        <li>Assign 4-bit region code to <strong>both endpoints</strong> P1(x1,y1) and P2(x2,y2).</li>
+        <li>If <strong>Code1 = 0000 AND Code2 = 0000</strong> → Line is completely inside → <strong>ACCEPT trivially</strong>.</li>
+        <li>If <strong>(Code1 AND Code2) ≠ 0000</strong> → At least one bit common → Line is completely outside same boundary → <strong>REJECT trivially</strong>.</li>
+        <li>If neither: Line is <strong>partially inside</strong> → Find intersection with boundary where code ≠ 0000.</li>
+        <li>Replace the outside endpoint with the intersection point. Recalculate its region code.</li>
+        <li><strong>Repeat</strong> steps 2–5 until line is accepted or rejected.</li>
+      </ul>
+
+      <h3 class="sub-q">Intersection Formulas:</h3>
+      <div class="calc-block">
+<strong>Left/Right boundary</strong> ($x = x_{\min}$ or $x_{\max}$):
+$$y = y_1 + m \cdot (x_{\text{bound}} - x_1) \quad \text{where } m = \frac{y_2 - y_1}{x_2 - x_1}$$
+
+<strong>Top/Bottom boundary</strong> ($y = y_{\min}$ or $y_{\max}$):
+$$x = x_1 + \frac{y_{\text{bound}} - y_1}{m}$$
+      </div>
+
+      <div class="highlight-box">
+        <strong>Advantage:</strong> Trivial accept/reject avoids intersection calculations for most lines → very efficient.<br>
+        <strong>Disadvantage:</strong> Requires multiple iterations for lines crossing many boundaries.
+      </div>
+
+      <div class="separator"></div>
+
+      <h2 class="q-title">(B) Table — Reflection & Shear Transformations (5 marks)</h2>
+      <span class="ans-label">Ans:</span>
+
+      <table class="transform-table">
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Transformation</th>
+            <th>Matrix (3×3 Homogeneous)</th>
+            <th>Original → Transformed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Reflection about X-axis</strong></td>
+            <td>$x' = x, \; y' = -y$</td>
+            <td class="matrix-cell">$\begin{bmatrix} 1 & 0 & 0 \\ 0 & -1 & 0 \\ 0 & 0 & 1 \end{bmatrix}$</td>
+            <td>$P(2,3) \to P'(2,-3)$</td>
+          </tr>
+          <tr>
+            <td><strong>Reflection about Y-axis</strong></td>
+            <td>$x' = -x, \; y' = y$</td>
+            <td class="matrix-cell">$\begin{bmatrix} -1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}$</td>
+            <td>$P(2,3) \to P'(-2,3)$</td>
+          </tr>
+          <tr>
+            <td><strong>Reflection about Origin</strong></td>
+            <td>$x' = -x, \; y' = -y$</td>
+            <td class="matrix-cell">$\begin{bmatrix} -1 & 0 & 0 \\ 0 & -1 & 0 \\ 0 & 0 & 1 \end{bmatrix}$</td>
+            <td>$P(2,3) \to P'(-2,-3)$</td>
+          </tr>
+          <tr>
+            <td><strong>Reflection about y = x</strong></td>
+            <td>$x' = y, \; y' = x$ (swap)</td>
+            <td class="matrix-cell">$\begin{bmatrix} 0 & 1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1 \end{bmatrix}$</td>
+            <td>$P(2,3) \to P'(3,2)$</td>
+          </tr>
+          <tr>
+            <td><strong>Reflection about y = −x</strong></td>
+            <td>$x' = -y, \; y' = -x$</td>
+            <td class="matrix-cell">$\begin{bmatrix} 0 & -1 & 0 \\ -1 & 0 & 0 \\ 0 & 0 & 1 \end{bmatrix}$</td>
+            <td>$P(2,3) \to P'(-3,-2)$</td>
+          </tr>
+          <tr>
+            <td><strong>X-Shear</strong></td>
+            <td>$x' = x + Sh_x \cdot y, \; y' = y$</td>
+            <td class="matrix-cell">$\begin{bmatrix} 1 & Sh_x & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}$</td>
+            <td>$P(2,3),\, Sh_x\!=\!2 \to P'(8,3)$</td>
+          </tr>
+          <tr>
+            <td><strong>Y-Shear</strong></td>
+            <td>$x' = x, \; y' = y + Sh_y \cdot x$</td>
+            <td class="matrix-cell">$\begin{bmatrix} 1 & 0 & 0 \\ Sh_y & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}$</td>
+            <td>$P(2,3),\, Sh_y\!=\!2 \to P'(2,7)$</td>
+          </tr>
+          <tr>
+            <td><strong>XY-Shear</strong></td>
+            <td>$x'\!=\!x\!+\!Sh_x y, \; y'\!=\!y\!+\!Sh_y x$</td>
+            <td class="matrix-cell">$\begin{bmatrix} 1 & Sh_x & 0 \\ Sh_y & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}$</td>
+            <td>Both $x$ and $y$ sheared</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+  <!-- ==================== Q6 ==================== -->
+  <div class="answer-page" id="q6">
+    <div class="q-header">
+      Q.No.6 — Short Notes (Any 5 × 2 marks = 10 marks)
+      <span class="marks-badge">10 MARKS</span>
+    </div>
+    <div class="ruled-content">
+
+      <h2 class="q-title">(A) Working of BAR Code Reader (2 marks)</h2>
+      <span class="ans-label">Ans:</span>
+      <ul class="point-list">
+        <li>A barcode consists of a series of alternating <strong>dark bars</strong> and <strong>white spaces</strong> of varying widths that represent encoded data in a machine-readable format.</li>
+        <li>A <strong>laser beam or LED light source</strong> inside the barcode reader illuminates the barcode printed on the product or label.</li>
+        <li>A <strong>photodetector</strong> sensor inside the reader detects the reflected light — the dark bars absorb the light while the white spaces reflect it back to the sensor.</li>
+        <li>The pattern of reflected light is converted into <strong>electrical pulses</strong> that represent binary data (0s for dark bars and 1s for white spaces).</li>
+        <li>A built-in decoder circuit <strong>decodes</strong> the binary pulse pattern into human-readable data such as product numbers, prices, or identification codes.</li>
+        <li>The decoded data is then sent to the connected <strong>computer or POS (Point of Sale) system</strong> for processing, inventory management, or billing purposes.</li>
+      </ul>
+
+      <div class="separator"></div>
+
+      <h2 class="q-title">(B) WARNOCK's Algorithm (2 marks)</h2>
+      <span class="ans-label">Ans:</span>
+      <ul class="point-list">
+        <li>Warnock's algorithm is an <strong>area-subdivision</strong> based hidden surface removal algorithm that works by recursively dividing the screen into smaller regions.</li>
+        <li>The algorithm begins by dividing the entire screen into <strong>4 equal quadrants (sub-areas)</strong>, and then analyzes each quadrant independently.</li>
+        <li>For each area, the algorithm checks three cases: <strong>(a)</strong> If no polygon is present in the area → fill with background color. <strong>(b)</strong> If only 1 polygon completely covers the area → fill with that polygon's color. <strong>(c)</strong> If multiple polygons overlap in the area → subdivide that area further into 4 smaller quadrants.</li>
+        <li>This subdivision process continues <strong>recursively</strong> until either a simple case is found (no overlap or single polygon) or the area has been reduced to a single pixel.</li>
+        <li>The algorithm is very efficient for scenes that have <strong>few overlapping polygons</strong>, as most areas are resolved quickly without deep recursion.</li>
+        <li>Main limitation: It becomes very expensive and slow for <strong>complex scenes</strong> with many overlapping polygons, as the recursion depth can become extremely high.</li>
+      </ul>
+
+      <div class="separator"></div>
+
+      <h2 class="q-title">(C) Z-Buffer Algorithm (2 marks)</h2>
+      <span class="ans-label">Ans:</span>
+      <ul class="point-list">
+        <li>The algorithm maintains a <strong>Z-Buffer</strong> (also called depth buffer) which is a 2D array of the same size as the screen resolution, storing one depth value per pixel.</li>
+        <li>At the start, the Z-Buffer is initialized with the <strong>maximum depth</strong> value (∞, representing the farthest possible distance) and the Frame Buffer is filled with the background color.</li>
+        <li>For each polygon in the scene, and for each pixel (x,y) that the polygon covers, the algorithm calculates the depth <strong>z</strong> of the polygon at that pixel position.</li>
+        <li>If the calculated z is less than ZBuffer[x,y], it means this surface is closer to the viewer, so we <strong>update</strong> both: ZBuffer[x,y] = z and FrameBuffer[x,y] = polygon's color at that point.</li>
+        <li>If z is greater than or equal to ZBuffer[x,y], it means there is already a <strong>closer surface</strong> stored at that pixel, so we skip this polygon for that pixel.</li>
+        <li><strong>Limitation:</strong> The Z-Buffer algorithm cannot handle transparent surfaces (since it only stores one depth per pixel), and it requires a large amount of memory equal to the frame buffer size.</li>
+      </ul>
+
+      <div class="separator"></div>
+
+      <h2 class="q-title">(D) Inkjet Printer (2 marks)</h2>
+      <span class="ans-label">Ans:</span>
+      <ul class="point-list">
+        <li>The printhead is mounted on a movable carriage that moves <strong>horizontally</strong> across the paper from left to right (and back), printing one line at a time.</li>
+        <li>The printhead contains hundreds of <strong>tiny nozzles</strong> (microscopic openings) through which extremely fine droplets of ink are sprayed onto the paper surface.</li>
+        <li><strong>Thermal type (HP, Canon):</strong> A tiny heater element rapidly vaporizes the ink, creating a bubble that pushes and ejects a droplet through the nozzle onto the paper.</li>
+        <li><strong>Piezoelectric type (Epson):</strong> A piezoelectric crystal deforms when voltage is applied, creating pressure that pushes an ink droplet out through the nozzle with precise control.</li>
+        <li>Color inkjet printers use <strong>CMYK</strong> (Cyan, Magenta, Yellow, and Black) ink cartridges. By mixing these four colors in varying amounts, the printer can produce a full range of colors.</li>
+        <li>After each horizontal pass, the paper advances by a small amount (one line), and the process repeats. The complete image is formed row by row from top to bottom of the page.</li>
+      </ul>
+
+      <div class="separator"></div>
+
+      <h2 class="q-title">(E) Working of Scanner (2 marks)</h2>
+      <span class="ans-label">Ans:</span>
+      <ul class="point-list">
+        <li>The document to be scanned is placed face-down on a transparent <strong>glass plate</strong> (called the platen) at the top of the scanner.</li>
+        <li>A <strong>bright light source</strong> (usually a fluorescent lamp or LED array) beneath the glass illuminates one narrow line of the document at a time.</li>
+        <li>The reflected light from the document passes through a system of <strong>lenses and mirrors</strong> which focus it onto a CCD (Charge Coupled Device) sensor array.</li>
+        <li>The CCD sensor converts the <strong>light intensity into analog electrical signals</strong>, where brighter areas produce stronger signals and darker areas produce weaker signals.</li>
+        <li>An ADC (Analog to Digital Converter) then converts these analog signals into <strong>digital values</strong> (binary numbers) representing the brightness and color of each pixel.</li>
+        <li>The scan head assembly slowly moves across the document from top to bottom, scanning the entire document line by line. The final digital image data is then stored in the computer's memory.</li>
+      </ul>
+
+      <div class="separator"></div>
+
+      <h2 class="q-title">(G) RGB Color Model (2 marks)</h2>
+      <span class="ans-label">Ans:</span>
+      <ul class="point-list">
+        <li>RGB is an <strong>additive color model</strong>, which means colors are created by adding (combining) different wavelengths of light together. Adding all three gives white light.</li>
+        <li>The three primary colors used are: <strong>Red (R), Green (G), and Blue (B)</strong>. By mixing these three in different proportions, any visible color can be reproduced on screen.</li>
+        <li>Each color component has a value range of <strong>0 to 255</strong> (8 bits per channel), giving a total of 24 bits per pixel for full color representation.</li>
+        <li>Some common examples: White = (255, 255, 255), Black = (0, 0, 0), Pure Red = (255, 0, 0), Yellow = (255, 255, 0), and Cyan = (0, 255, 255).</li>
+        <li>Total number of possible colors = <strong>2²⁴ = 16,777,216 ≈ 16.7 million colors</strong>, which is more than enough to represent photorealistic images on digital displays.</li>
+        <li>The RGB model is used extensively in: computer monitors, TV screens, digital cameras, mobile phone displays, and all light-emitting digital display devices.</li>
+      </ul>
+
+      <div class="separator"></div>
+
+      <h2 class="q-title">(H) Top 5 Applications of Computer Graphics (2 marks)</h2>
+      <span class="ans-label">Ans:</span>
+      <ul class="point-list">
+        <li><strong>Entertainment & Animation:</strong> Computer graphics is widely used in movies (VFX, CGI), video games, and animated cartoons. Studios like Pixar and DreamWorks rely heavily on CG for creating stunning visual content.</li>
+        <li><strong>CAD/CAM:</strong> Computer Aided Design is used extensively in engineering fields for designing mechanical parts, buildings, bridges, and circuit boards. CAM uses these designs for automated manufacturing.</li>
+        <li><strong>Medical Imaging:</strong> CG enables visualization of MRI scans, CT scans, X-ray images, and 3D anatomical models of the human body, helping doctors in accurate diagnosis and surgical planning.</li>
+        <li><strong>Education & Training:</strong> Realistic simulations like flight simulators for pilot training, virtual surgical training for medical students, and interactive virtual labs make learning safer and more effective.</li>
+        <li><strong>Geographical Information Systems (GIS):</strong> CG is used in creating digital maps, satellite imagery visualization, terrain modeling, and navigation systems like Google Maps and GPS applications.</li>
+      </ul>
+
+    </div>
+  </div>
+
+</div>
+<script>
+(function() {
+  var toggle = document.getElementById('sidebarToggle');
+  var close = document.getElementById('sidebarClose');
+  var overlay = document.getElementById('sidebarOverlay');
+
+  if (toggle) {
+    toggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      document.body.classList.toggle('sidebar-open');
+    });
+  }
+  if (close) {
+    close.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.body.classList.remove('sidebar-open');
+    });
+  }
+  if (overlay) {
+    overlay.addEventListener('click', function() {
+      document.body.classList.remove('sidebar-open');
+    });
+  }
+  // Close sidebar when a link is clicked
+  var links = document.querySelectorAll('.toc-group a');
+  for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', function() {
+      document.body.classList.remove('sidebar-open');
+    });
+  }
+})();
+</script>
+</body>
+</html>
