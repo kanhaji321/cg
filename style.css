@@ -643,6 +643,46 @@ em { font-style: italic; color: var(--accent-green); font-weight: 600; }
   .answer-page { box-shadow: none; border: 1px solid #ccc; transform: none; }
 }
 
+/* ─── Replaced/Updated answer highlight ─── */
+.replaced {
+  background: rgba(255, 243, 200, 0.35);
+  border-left: 3px solid #e6a817;
+  padding-left: 10px;
+  margin-left: -13px;
+  border-radius: 0 4px 4px 0;
+  position: relative;
+}
+.replaced::after {
+  content: '✎ updated';
+  position: absolute;
+  top: 4px;
+  right: 8px;
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+  font-size: 10px;
+  color: #c49000;
+  font-weight: 700;
+  opacity: 0.6;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+/* For replaced items inside def-grid, adjust the existing left border */
+.def-item.replaced {
+  border-left: 3px solid #e6a817;
+  background: rgba(255, 243, 200, 0.45);
+}
+.def-item.replaced::after {
+  display: none; /* too many items, skip per-item label */
+}
+/* Replaced highlight for entire sections (def-grid wrapper, calc-block etc.) */
+.replaced-section {
+  position: relative;
+  background: rgba(255, 243, 200, 0.2);
+  border-left: 3px solid #e6a817;
+  padding-left: 12px;
+  margin-left: -15px;
+  border-radius: 0 4px 4px 0;
+}
+
 /* ─── Responsive ─── */
 @media (max-width: 700px) {
   .def-grid { grid-template-columns: 1fr; }
