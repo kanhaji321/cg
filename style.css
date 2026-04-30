@@ -667,11 +667,19 @@ em { font-style: italic; color: var(--accent-green); font-weight: 600; }
 }
 /* For replaced items inside def-grid, adjust the existing left border */
 .def-item.replaced {
-  border-left: 3px solid #e6a817;
-  background: rgba(255, 243, 200, 0.45);
+  border-left: 4px solid #d4a017;
+  background: rgba(255, 235, 150, 0.5);
+  box-shadow: inset 0 0 0 1px rgba(212, 160, 23, 0.2);
+}
+.def-item.replaced .def-term::after {
+  content: ' ✎';
+  font-size: 12px;
+  color: #c49000;
+  text-decoration: none;
+  display: inline;
 }
 .def-item.replaced::after {
-  display: none; /* too many items, skip per-item label */
+  display: none;
 }
 /* Replaced highlight for entire sections (def-grid wrapper, calc-block etc.) */
 .replaced-section {
